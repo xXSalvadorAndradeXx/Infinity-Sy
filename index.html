@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Infinity UI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
         :root {
             --primary-color: #4a90e2;
@@ -187,11 +189,75 @@
                 padding: 0.8rem;
             }
         }
+
+        .menu-toggle {
+           background-color: var(--menu-background);
+           align-items: right;
+           display: none;
+
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+    
+
+        nav ul li a:hover {
+            background: var(--hover-color);
+        }
+
+        .nav-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            margin-left: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-icon:hover {
+            transform: scale(1.1);
+        }
+
+        /* Estilo para pantallas pequeñas */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                background: var(--menu-background);
+                padding: 1rem 0;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+
+            .nav-icon {
+                margin: 1rem 0 0;
+            }
+        }
+
+
     </style>
 </head>
 <body>
     <nav>
+        <a class="menu-toggle"><i class="fas fa-bars"></i></a>
         <ul>
+            
             <li><a href="index.html">Inicio</a></li>
             <li><a href="#">Catálogo</a></li>
             <li><a href="#">Carrito</a></li>
@@ -200,7 +266,9 @@
         </ul>
         <a href="#">
             <img src="Recursos/1.jpg" alt="" class="nav-icon">
+            
         </a>
+        
     </nav>
 
     <div class="container">
@@ -221,7 +289,18 @@
     <footer>
         &copy; 2024 Infinity UI. All rights reserved.
     </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('nav ul');
+    
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+    </script>
 </body>
+
+
 </html>
 
 
