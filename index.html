@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One UI Inspired Design</title>
+    <style>
+        :root {
+            --primary-color: #4a90e2; /* Azul principal */
+            --secondary-color: #5b83b4; /* Azul secundario */
+            --dark-color: #1c1e2f; /* Fondo oscuro */
+            --background-color: #5b83b4; /* Fondo sección */
+            --menu-background: #2b2f42; /* Fondo del menú */
+            --text-color: #ffffff; /* Texto blanco */
+            --hover-color: #56a3fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: var(--dark-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+        }
+
+        nav {
+            background: var(--menu-background);
+            padding: 1rem;
+            border-radius: 80px ;
+            width: 80%;
+            margin: 1rem auto 0;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 1.2rem;
+            padding: 0.5rem 1.5rem;
+            border-radius: 80px;
+            transition: background 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background: var(--hover-color);
+        }
+
+        .section-container {
+            width: 100%;
+            background: var(--background-color);
+            border-radius: 0 0 24px 24px;
+            padding: 2rem 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .section-content {
+            background: var(--secondary-color);
+            width: 80%;
+            height: 300px;
+            border-radius: 16px 16px 0 0;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 1rem;
+            background: var(--menu-background);
+            text-align: center;
+            color: var(--text-color);
+            border-radius: 12px;
+            width: 80%;
+            margin-bottom: 1rem;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+        </ul>
+    </nav>
+
+  
+
+    <footer>
+        &copy; 2024 Infinity UI. All rights reserved.
+    </footer>
+</body>
+</html>
+
+
