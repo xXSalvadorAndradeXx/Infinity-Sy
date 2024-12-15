@@ -8,7 +8,7 @@
         :root {
             --primary-color: #4a90e2; /* Azul principal */
             --secondary-color: #5b83b4; /* Azul secundario */
-            --dark-color: #1c1e2f; /* Fondo oscuro */
+            --dark-color: #1c1e2f; /* Fo */
             --background-color: #5b83b4; /* Fondo sección */
             --menu-background: #2b2f42; /* Fondo del menú */
             --text-color: #ffffff; /* Texto blanco */
@@ -86,14 +86,45 @@
             background: var(--menu-background);
             text-align: center;
             color: var(--text-color);
-            border-radius: 12px;
+            border-radius:80px;
             width: 80%;
             margin-bottom: 1rem;
             box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
         }
-        img{
-            margin-top: 20px;
-            border-radius: 20px;
+        .container {
+            max-width: 1200px;
+            width: 90%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .card {
+            margin-top: 30px;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            color: #000;
+            border-radius: 16px;
+            padding: 1.5rem;
+            text-align: center;
+            flex: 1 1 calc(30% - 1rem);
+            max-width: calc(30% - 1rem);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            margin: 0.5rem 0;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #666666;
         }
 
     </style>
@@ -102,13 +133,29 @@
     <nav>
         <ul>
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
+            <li><a href="#"> Catalogo</a></li>
+            <li><a href="#">Carrito</a></li>
+            <li><a href="#"> Pefil</a></li>
         </ul>
     </nav>
 
-  <img src="Recursos/1.jpg" alt="Infinity UI" width="1000px" height="620px ">
+    <div class="container">
+        <div class="card">
+            <h2>Feature 1</h2>
+            <p>Discover the amazing capabilities of our platform.</p>
+        </div>
+        <div class="card">
+            <h2>Feature 2</h2>
+            <p>Effortless and elegant solutions for your needs.</p>
+        </div>
+        <div class="card">
+            <h2>Feature 3</h2>
+            <p>Seamlessly integrated with modern technologies.</p>
+        </div>
+    </div>
+
+
+    
 
     <footer>
         &copy; 2024 Infinity UI. All rights reserved.
